@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NJV School Karachi Admission Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="njv logo.jpeg" alt="NJV School Logo Left" class="logo">
+            <h1>NJV School Karachi Admission Form</h1>
+            <img src="akhlogo.png" alt="NJV School Logo Right" class="logo">
+        </div>
+        <form id="admissionForm">
+            <div class="form-row">
+                <div class="image-upload">
+                    <label for="studentPhoto">Student Image <span class="required">*</span></label>
+                    <input type="file" id="studentPhoto" name="studentPhoto" accept="image/*" onchange="previewImage('studentPhoto', 'imagePreview')" required>
+                    <img id="imagePreview" class="image-preview" alt="Student Preview">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="applicantFirstName">Student First Name <span class="required">*</span></label>
+                    <input type="text" id="applicantFirstName" name="applicantFirstName" placeholder="Enter First Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantLastName">Student Last Name <span class="required">*</span></label>
+                    <input type="text" id="applicantLastName" name="applicantLastName" placeholder="Enter Last Name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fatherName">Father’s Name <span class="required">*</span></label>
+                    <input type="text" id="fatherName" name="fatherName" placeholder="Enter Father's Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="fatherCnic">Father’s CNIC <span class="required">*</span></label>
+                    <input type="text" id="fatherCnic" name="fatherCnic" placeholder="45401-XXXXXXX-X" required>
+                    <div class="cnic-format">Format: 45401-XXXXXXX-X</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="dob">Date of Birth <span class="required">*</span></label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentCnic">Student’s CNIC/B-Form <span class="required">*</span></label>
+                    <input type="text" id="studentCnic" name="studentCnic" placeholder="45401-XXXXXXX-X" required>
+                    <div class="cnic-format">Format: 45401-XXXXXXX-X</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="placeOfBirth">Place of Birth <span class="required">*</span></label>
+                    <input type="text" id="placeOfBirth" name="placeOfBirth" placeholder="Enter Place of Birth" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fatherOccupation">Father’s Occupation <span class="required">*</span></label>
+                    <input type="text" id="fatherOccupation" name="fatherOccupation" placeholder="Enter Father's Occupation" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone <span class="required">*</span></label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter 11-digit Phone Number" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="postalAddress">Postal Address <span class="required">*</span></label>
+                <input type="text" id="postalAddress" name="postalAddress" placeholder="Enter Postal Address" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="emergencyContact">Emergency Contact <span class="required">*</span></label>
+                    <input type="text" id="emergencyContact" name="emergencyContact" placeholder="Enter Emergency Contact" required>
+                </div>
+                <div class="form-group">
+                    <label for="healthIssue">Health Issue <span class="required">*</span></label>
+                    <select id="healthIssue" name="healthIssue" required>
+                        <option value="">Select</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="studentCnicImage">Upload Student’s CNIC/B-Form Image <span class="required">*</span></label>
+                    <input type="file" id="studentCnicImage" name="studentCnicImage" accept="image/*" onchange="previewImage('studentCnicImage', 'cnicPreview')" required>
+                    <img id="cnicPreview" class="image-preview" alt="CNIC/B-Form Image Preview">
+                </div>
+                <div class="form-group">
+                    <label for="paidChalanImage">Upload Paid Chalan Voucher <span class="required">*</span></label>
+                    <input type="file" id="paidChalanImage" name="paidChalanImage" accept="image/*" onchange="previewImage('paidChalanImage', 'chalanPreview')" required>
+                    <img id="chalanPreview" class="image-preview" alt="Paid Chalan Voucher Preview">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="button" onclick="openPreview()">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
